@@ -48,7 +48,7 @@ export async function getSmartCutParams({ path, videoDuration, desiredCutFrom, s
 
   // to account for inaccuracies and quality loss
   // see discussion https://github.com/mifi/lossless-cut/issues/126#issuecomment-1602266688
-  videoBitrate = Math.floor(videoBitrate * 1.2);
+  videoBitrate = Math.floor(videoBitrate * 3.1);
 
   const { codec_name: videoCodec } = videoStream;
   if (videoCodec == null) throw new Error('Unable to determine codec for smart cut');
